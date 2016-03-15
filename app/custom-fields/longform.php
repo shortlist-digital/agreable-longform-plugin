@@ -10,7 +10,7 @@ foreach($acf_groups as $group){
   }
 }
 
-include_once $this->base_dir."/custom-fields/WidgetLoader.php";
+include_once get_template_directory() . "/custom-fields/WidgetLoader.php";
 
 register_field_group(array (
   'key' => $key . '_group',

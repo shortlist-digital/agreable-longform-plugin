@@ -63,7 +63,7 @@ return [
      * The panels to auto-load.
      */
     'panels' => [
-        'AgreableLongformPlugin' => __DIR__ . '/app/panels.php'
+        // 'AgreableLongformPlugin' => __DIR__ . '/app/panels.php'
     ],
 
     /**
@@ -81,7 +81,7 @@ return [
      * when rendering a view in twig.
      */
     'views' => [
-        'AgreableLongformPlugin' => __DIR__ . '/resources/views'
+        // 'AgreableLongformPlugin' => __DIR__ . '/resources/views'
     ],
 
     /**
