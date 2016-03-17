@@ -49,14 +49,14 @@ return [
      * The widgets to auto-load.
      */
     'enqueue' => [
-        __DIR__ . '/app/enqueue.php'
+        // __DIR__ . '/app/enqueue.php'
     ],
 
     /**
      * The routes to auto-load.
      */
     'routes' => [
-        'AgreableLongformPlugin' => __DIR__ . '/app/routes.php'
+        // 'AgreableLongformPlugin' => __DIR__ . '/app/routes.php'
     ],
 
     /**

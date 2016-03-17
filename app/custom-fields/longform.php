@@ -13,7 +13,7 @@ foreach($acf_groups as $group){
 include_once get_template_directory() . "/custom-fields/WidgetLoader.php";
 
 register_field_group(array (
-  'key' => $key . '_group',
+  'key' => $key . '_basic_group',
   'title' => 'Basic Details',
   'fields' => array (
     array (
@@ -90,7 +90,7 @@ register_field_group(array (
 $articleWidgets = WidgetLoader::findByUsage('longform');
 
 register_field_group(array (
-  'key' => $key . '_group',
+  'key' => $key . '_widgets_group',
   'title' => 'Body',
   'fields' => array (
     array (
