@@ -68,12 +68,12 @@ register_field_group(array (
       'disabled' => 0,
     ),
     array (
-      'key' => $key . '_meta_description',
-      'label' => 'Meta Description',
-      'name' => 'meta_description',
+      'key' => $key . '_sell',
+      'label' => 'Sell',
+      'name' => 'sell',
       'prefix' => '',
       'type' => 'text',
-      'instructions' => 'This will be used as the article description on Google search results pages.',
+      'instructions' => 'Summary to entice the reader to view the full article.',
       'required' => 1,
       'conditional_logic' => 0,
       'wrapper' => array (
