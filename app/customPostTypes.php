@@ -23,7 +23,7 @@
     'label'               => __('features post', 'text_domain'),
     'description'         => __('Beautiful editorial longreads', 'text_domain'),
     'labels'              => $labels,
-    'supports'            => array('title','thumbnail','revisions'),
+    'supports'            => array('title','thumbnail','revisions','author'),
     'taxonomies'          => array('category','post_tag'),
     'hierarchical'        => false,
     'public'              => true,
