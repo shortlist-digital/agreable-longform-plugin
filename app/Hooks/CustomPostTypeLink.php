@@ -17,7 +17,7 @@ class CustomPostTypeLink {
     }
 
     // TODO: Need to autoload these classes in AgreableBaseTheme
-    include __DIR__ . '/../../../../themes/agreable-base-theme/libs/services/CategoryService.php';
+    include_once __DIR__ . '/../../../../themes/agreable-base-theme/libs/services/CategoryService.php';
     $category_hierarchy = \AgreableCategoryService::get_post_category_hierarchy($post);
 
     $permalink = get_home_url();
