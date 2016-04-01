@@ -38,9 +38,7 @@
     'exclude_from_search' => false,
     'publicly_queryable'  => true,
     'capability_type'     => 'page',
-    'rewrite'             => array(
-      'slug'              => 'longform'
-    )
+    'rewrite'             => array('slug' => 'longform')
   );
 
   \register_post_type('longform', $args);

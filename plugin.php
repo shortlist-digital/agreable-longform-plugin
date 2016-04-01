@@ -30,4 +30,3 @@ if(file_exists(__DIR__ . '/../../../../vendor/getherbert/framework/bootstrap/aut
 } else {
   require_once __DIR__ . '/vendor/getherbert/framework/bootstrap/autoload.php';
 }
-
