@@ -34,11 +34,12 @@
     'menu_position'       => 4,
     'menu_icon'           => 'dashicons-format-quote',
     'can_export'          => true,
-    'has_archive'         => true,
+    'has_archive'         => false,
     'exclude_from_search' => false,
     'publicly_queryable'  => true,
     'capability_type'     => 'page',
-    'rewrite'             => array('slug' => 'longform')
+    'rewrite'             => false,
+    'query_var' => true,
   );
 
   \register_post_type('longform', $args);
