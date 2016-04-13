@@ -36,7 +36,7 @@ add_action('agreable_app_theme_init', function() {
         ),
       ),
     ),
-    'menu_order' => 0,
+    'menu_order' => 2,
     'position' => 'normal',
     'style' => 'default',
     'label_placement' => 'top',

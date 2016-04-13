@@ -13,7 +13,8 @@ return [
      */
     'requires' => [
         __DIR__ . '/app/customPostTypes.php',
-        __DIR__ . '/app/custom-fields/longform.php',
+        __DIR__ . '/app/custom-fields/longform-widgets.php',
+        __DIR__ . '/app/custom-fields/header.php',
         __DIR__ . '/app/hooks.php',
     ],
 
