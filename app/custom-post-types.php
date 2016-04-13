@@ -20,7 +20,7 @@
   );
 
   $args = array(
-    'label'               => __('features post', 'text_domain'),
+    'label'               => __('longform post', 'text_domain'),
     'description'         => __('Beautiful editorial longreads', 'text_domain'),
     'labels'              => $labels,
     'supports'            => array('title','thumbnail','revisions','author'),

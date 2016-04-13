@@ -6,7 +6,7 @@ add_action('agreable_app_theme_init', function() {
 
   include_once get_template_directory() . "/custom-fields/WidgetLoader.php";
 
-  $articleWidgets = WidgetLoader::findByUsage('longform');
+  $widgets = WidgetLoader::findByUsage('longform');
 
   register_field_group(array (
     'key' => $key . '_widgets_group',
@@ -24,7 +24,7 @@ add_action('agreable_app_theme_init', function() {
         'button_label' => 'Add Widget',
         'min' => 1,
         'max' => '',
-        'layouts' => $articleWidgets,
+        'layouts' => $widgets,
       ),
     ),
     'location' => array (
