@@ -13,10 +13,17 @@ class HeaderDefinition {
       'title' => 'Opening Header',
       'fields' => array (
         array (
+          'key' => 'longform_header_basic_details_tab',
+          'label' => 'Basic Details',
+          'type' => 'tab',
+          'required' => 0,
+          'conditional_logic' => 0,
+          'placement' => 'left',
+        ),
+        array (
           'key' => $key . '_type',
           'label' => 'Type',
           'name' => 'header_type',
-          'prefix' => '',
           'type' => 'select',
           'instructions' => 'Select the type of header for this content',
           'choices' => array (
@@ -26,19 +33,16 @@ class HeaderDefinition {
             'super-hero' => 'super-hero',
           ),
           'wrapper' => array (
-            'width' => '50%'
+            'width' => '100%'
           ),
         ),
         array (
-          'key' => 'agreable-no-store_' . $key . '_options',
-          'label' => 'Options',
-          'name' => 'header_options',
-          'type' => 'true_false',
-          'wrapper' => array (
-            'class' => 'agreable-options-controller',
-            'width' => '50%'
-          ),
-          'readonly' => 1
+          'key' => 'lonform_header_advanced_details_tab',
+          'label' => 'Advanced Details',
+          'type' => 'tab',
+          'required' => 0,
+          'conditional_logic' => 0,
+          'placement' => 'left',
         ),
         array (
           'key' => $key . '_text_colour',
@@ -46,84 +50,34 @@ class HeaderDefinition {
           'name' => 'header_text_colour',
           'type' => 'color_picker',
           'wrapper' => array (
-            'class' => 'agreable-options',
+            'width' =>'100%',
           ),
-        ),
-        array (
-          'key' => $key . '_heading_has_underline',
-          'label' => 'Do you want to underline the heading?',
-          'name' => 'heading_has_underline',
-          'type' => 'true_false',
-          'instructions' => '',
-          'conditional_logic' => 0,
-          'wrapper' => array (
-            'width' => '50%',
-            'class' => 'agreable-options',
-          ),
-          'choices' => array (
-            '' => '',
-          ),
-          'default_value' => 0,
-        ),
-        array (
-          'key' => $key . '_header_has_background_colour',
-          'label' => 'Use a background colour instead of an image',
-          'name' => 'header_has_background_colour',
-          'type' => 'true_false',
-          'instructions' => '',
-          'conditional_logic' => 0,
-          'wrapper' => array (
-            'width' => '50%',
-            'class' => 'agreable-options',
-          ),
-          'default_value' => 0,
         ),
         array (
           'key' => $key . '_background_colour',
           'label' => 'Background Colour',
           'name' => 'header_background_colour',
+          'instructions' => 'Choose a colour if you want to use a colour instead of an image',
           'type' => 'color_picker',
-          'conditional_logic' => array (
-            array (
-              array (
-                'field' => $key . '_background_selector',
-                'operator' => '==',
-                'value' => '1',
-              ),
-            ),
-          ),
           'wrapper' => array (
-            'width' => 50,
-            'class' => 'agreable-options',
+            'width' => '100%',
           ),
         ),
         array (
           'key' => $key . '_line_colour',
           'label' => 'Underline Colour',
           'name' => 'header_line_colour',
+          'instructions' => 'Choose a colour if you want to underline your heading',
           'type' => 'color_picker',
-          'conditional_logic' => array (
-            array (
-              array (
-                'field' => $key . '_heading_underline',
-                'operator' => '==',
-                'value' => '1',
-              ),
-            ),
-          ),
           'wrapper' => array (
-            'class' => 'agreable-options',
+            'width' => '100%',
           ),
         ),
         array (
           'key' => $key . '_other_options',
-          'label' => 'Other',
+          'label' => 'Other options',
           'name' => 'header_other_options',
           'type' => 'checkbox',
-          'instructions' => '',
-          'wrapper' => array (
-            'class' => 'agreable-options',
-          ),
           'choices' => array (
             'full-height' => 'Enable full height (fill the screen)',
             'parallax' => 'Enable parallax effect',
