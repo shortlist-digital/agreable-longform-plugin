@@ -6,6 +6,8 @@ add_action('admin_init', function() {
       'Longforms Editor',
       array(
         'read' => true,
+        'edit_posts'   => true,
+        'delete_posts' => true,
         'upload_files' => true,
       )
     );
