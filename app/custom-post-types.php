@@ -37,11 +37,23 @@
     'has_archive'         => false,
     'exclude_from_search' => false,
     'publicly_queryable'  => true,
-    'capability_type'     => 'page',
-    'rewrite'             => false,
+    'capability_type' => 'longform',
+    'capabilities' => array(
+      'publish_posts' => 'publish_longforms',
+      'edit_posts' => 'edit_longforms',
+      'edit_others_posts' => 'edit_others_longforms',
+      'delete_posts' => 'delete_longforms',
+      'delete_private_posts' => 'delete_private_longforms',
+      'delete_others_posts' => 'delete_others_longforms',
+      'read_private_posts' => 'read_private_longforms',
+      'edit_post' => 'edit_longform',
+      'delete_post' => 'delete_longform',
+      'read_post' => 'read_longform',
+    ),
+    'map_meta_cap' => true,
+    'rewrite' => false,
     'query_var' => true,
   );
-
   \register_post_type('longform', $args);
 }
 ,0);
