@@ -6,8 +6,9 @@ add_action('admin_init', function() {
       'Longforms Editor',
       array(
         'read' => true,
-        'edit_posts'   => true,
+        'edit_posts' => true,
         'delete_posts' => true,
+        'publish_posts' => true,
         'upload_files' => true,
       )
     );
@@ -28,5 +29,6 @@ add_action('admin_init', function() {
     $role->add_cap('delete_others_longforms');
     $role->add_cap('delete_private_longforms');
     $role->add_cap('delete_published_longforms');
+    $role->remove_cap('edit_posts');
   }
 });
