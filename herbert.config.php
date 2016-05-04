@@ -15,6 +15,7 @@ return [
         __DIR__ . '/app/custom-post-types.php',
         __DIR__ . '/app/CustomFields/longform-widgets.php',
         __DIR__ . '/app/CustomFields/header.php',
+        __DIR__ . '/app/CustomRoles/roles.php',
         __DIR__ . '/app/hooks.php',
     ],
 
