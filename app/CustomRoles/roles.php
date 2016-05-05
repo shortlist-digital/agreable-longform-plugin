@@ -1,6 +1,5 @@
 <?php
 add_action('admin_init', function() {
-  remove_role('longforms_editor');
   if (!get_role('longforms_editor')) {
     // Add longforms editor role
     add_role('longforms_editor',
