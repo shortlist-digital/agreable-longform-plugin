@@ -1,5 +1,6 @@
 <?php
 add_action('admin_init', function() {
+  remove_role('longforms_editor');
   if (!get_role('longforms_editor')) {
     // Add longforms editor role
     add_role('longforms_editor',
@@ -15,7 +16,6 @@ add_action('admin_init', function() {
   }
   // Add the roles you'd like to administer the custom post types
   $roles = array('longforms_editor','administrator');
-
   // Loop through each role and assign capabilities
   foreach($roles as $the_role) {
     $role = get_role($the_role);
@@ -29,6 +29,6 @@ add_action('admin_init', function() {
     $role->add_cap('delete_others_longforms');
     $role->add_cap('delete_private_longforms');
     $role->add_cap('delete_published_longforms');
-    $role->remove_cap('edit_posts');
   }
+    get_role($roles[0])->remove_cap('edit_posts');
 });
