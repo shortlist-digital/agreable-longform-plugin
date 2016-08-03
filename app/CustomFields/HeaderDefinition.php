@@ -38,6 +38,44 @@ class HeaderDefinition {
           ),
         ),
         array (
+          'key' => $key . '_video_file',
+          'label' => 'Background video',
+          'name' => 'background_video',
+          'type' => 'url',
+          'instructions' => 'The absolute URL to the MP4 video file (http://site.com/video.mp4)',
+          'required' => 1,
+          'default_value' => '',
+          'conditional_logic' => array (
+            array (
+              array (
+                'field' => $key . '_type',
+                'operator' => '==',
+                'value' => 'super-hero-video',
+              ),
+            ),
+          ),
+        ),
+        array (
+          'key' => $key .'video_poster',
+          'label' => 'Poster',
+          'name' => 'poster',
+          'type' => 'image',
+          'instructions' => 'This image will be shown on mobile users and before the video plays to everyone else',
+          'required' => 1,
+          'return_format' => 'array',
+          'preview_size' => 'thumbnail',
+          'library' => 'all',
+          'conditional_logic' => array (
+            array (
+              array (
+                'field' => $key . '_type',
+                'operator' => '==',
+                'value' => 'super-hero-video',
+              ),
+            ),
+          ),
+        ),
+        array (
           'key' => 'lonform_header_advanced_details_tab',
           'label' => 'Advanced Details',
           'type' => 'tab',
@@ -84,15 +122,21 @@ class HeaderDefinition {
             'parallax' => 'Enable parallax effect',
             'carousel-buttons' => 'Enable previous/next carousel buttons (if used)',
             'scroll-down-button' => 'Enable scroll down button (if full-height is used)',
-            'display-post-category' => 'Display post category'
+            'display-post-category' => 'Display post category',
+            'autoplay' => 'Enable autoplay when the video is in view',
+            'loop' => 'Set the video to loop',
+            'mute' => 'Mute the video',
           ),
           'default_value' => array (
             'full-height' => '',
             'parallax' => '',
             'carousel-buttons' => 'carousel-buttons',
             'scroll-down-button' => 'scroll-down-button',
-            'display-post-category' => 'display-post-category'
-            ),
+            'display-post-category' => 'display-post-category',
+            'autoplay' => 'autoplay',
+            'loop' => 'loop',
+            'mute' => 'mute'
+          ),
         )
       ),
       'location' => array (
