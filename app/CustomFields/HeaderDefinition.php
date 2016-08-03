@@ -28,12 +28,51 @@ class HeaderDefinition {
           'instructions' => 'Select the type of header for this content',
           'choices' => array (
             'super-hero' => 'Super Hero',
+            'super-hero-video' => 'Super Hero Video',
           ),
           'default_value' => array (
             'super-hero' => 'super-hero',
           ),
           'wrapper' => array (
             'width' => '100%'
+          ),
+        ),
+        array (
+          'key' => $key . '_background_video',
+          'label' => 'Background video',
+          'name' => 'background_video',
+          'type' => 'url',
+          'instructions' => 'The absolute URL to the MP4 video file (http://site.com/video.mp4)',
+          'required' => 1,
+          'default_value' => '',
+          'conditional_logic' => array (
+            array (
+              array (
+                'field' => $key . '_type',
+                'operator' => '==',
+                'value' => 'super-hero-video',
+              ),
+            ),
+          ),
+        ),
+        array (
+          'key' => $key .'_video_poster',
+          'label' => 'Poster',
+          'name' => 'video_poster',
+          'type' => 'image',
+          'instructions' => 'This image will be shown on mobile users and before the video plays to everyone else',
+          'required' => 1,
+          'return_format' => 'array',
+          'preview_size' => 'thumbnail',
+          'library' => 'all',
+          'conditional_logic' => array (
+            array (
+              array (
+                'field' => $key . '_type',
+                'operator' => '==',
+                'value' => 'super-hero-video',
+              ),
+            ),
           ),
         ),
         array (
@@ -91,8 +130,33 @@ class HeaderDefinition {
             'carousel-buttons' => 'carousel-buttons',
             'scroll-down-button' => 'scroll-down-button',
             'display-post-category' => 'display-post-category'
+          ),
+        ),
+        array (
+          'key' => $key . '_superherovideo_options',
+          'label' => 'Superhero Video options',
+          'name' => 'header_superherovideo_options',
+          'type' => 'checkbox',
+          'choices' => array (
+            'autoplay' => 'Enable autoplay when the video is in view',
+            'loop' => 'Set the video to loop',
+            'mute' => 'Mute the video',
+          ),
+          'default_value' => array (
+            'autoplay' => 'autoplay',
+            'loop' => 'loop',
+            'mute' => 'mute'
+          ),
+          'conditional_logic' => array (
+            array (
+              array (
+                'field' => $key . '_type',
+                'operator' => '==',
+                'value' => 'super-hero-video',
+              ),
             ),
-        )
+          ),
+        ),
       ),
       'location' => array (
         array (
