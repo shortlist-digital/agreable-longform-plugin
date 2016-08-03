@@ -28,6 +28,7 @@ class HeaderDefinition {
           'instructions' => 'Select the type of header for this content',
           'choices' => array (
             'super-hero' => 'Super Hero',
+            'super-hero-video' => 'Super Hero Video',
           ),
           'default_value' => array (
             'super-hero' => 'super-hero',
