@@ -45,7 +45,7 @@ class HeaderDefinition {
           'required' => 1,
           'library' => 'all',
           'return_format' => 'url',
-          'mime_types' => 'avi, mov, mpg, mp4',
+          'mime_types' => 'mp4',
           'conditional_logic' => array (
             array (
               array (
