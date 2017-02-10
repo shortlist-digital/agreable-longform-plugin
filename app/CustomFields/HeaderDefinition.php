@@ -41,10 +41,11 @@ class HeaderDefinition {
           'key' => $key . '_background_video',
           'label' => 'Background video',
           'name' => 'background_video',
-          'type' => 'url',
-          'instructions' => 'The absolute URL to the MP4 video file (http://site.com/video.mp4)',
+          'type' => 'file',
           'required' => 1,
-          'default_value' => '',
+          'library' => 'all',
+          'return_format' => 'url',
+          'mime_types' => 'mp4',
           'conditional_logic' => array (
             array (
               array (
